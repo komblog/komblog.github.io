@@ -7,7 +7,7 @@ workbox.precaching.precacheAndRoute([
   { url: '/css/materialize.min.css', revision: '1' },
   { url: '/js/materialize.min.js', revision: '1' },
   { url: '/js/materialize.js', revision: '1' },
-  { url: '/js/nav.js', revision: '1' },
+  { url: '/js/nav.js', revision: '2' },
   { url: '/js/api.js', revision: '1' },
   { url: '/js/idb.js', revision: '1' },
   { url: '/js/startup.js', revision: '2' },
@@ -20,7 +20,7 @@ workbox.precaching.precacheAndRoute([
 ]);
 
 workbox.routing.registerRoute(
-  new RegExp('/pages/'),
+  new RegExp('/Pages/'),
   workbox.strategies.staleWhileRevalidate({
     cacheName: 'football-lovers'
   })
