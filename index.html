@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="apple-touch-icon" href="img/icon-192x192.png">
+  <meta charset="UTF-8"/>
+  <meta name="description" content="My first PWA"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#00897B"/>
+  <title>Football info</title>  
+  <link rel="stylesheet" href="css/materialize.min.css">
+  <link rel="manifest" href="/manifest.json">  
+  <script language="JavaScript" type="text/javascript" src="js/api.js"></script>
+  <script type="text/javascript" src="js/idb.js"></script>
+  <script src="js/nav.js"></script>
+  <script src="js/startup.js"></script>
+</head>
+<body>
+  <!-- Navigasi -->
+  <nav class="teal lighten-1" role="navigation">
+    <div class="nav-wrapper container">
+      <a href="#home" class="brand-logo" id="logo-container">Football Info</a>
+      <a href="#home" class="sidenav-trigger" data-target="nav-mobile">☰</a>      
+      <ul class="topnav right hide-on-med-and-down"></ul>
+      <ul class="sidenav" id="nav-mobile"></ul>
+    </div>
+  </nav>
+  <!-- Akhir Navigasi -->
+  <div class="container" id="body-content"></div>
+</body>
+<script src="js/materialize.min.js"></script>
+
+  <script>       
+
+    //cek service broker browser
+    if(!('serviceWorker' in navigator)) {
+        console.log("Browser tidak mendukung worker.");
+    } else {
+      registerServiceWorker();
+      requestPushPermition();
+      registerIDB();
+    }
+
+  </script>
+</html>
