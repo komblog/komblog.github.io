@@ -8,7 +8,7 @@ workbox.precaching.precacheAndRoute([
   { url: '/js/materialize.min.js', revision: '1' },
   { url: '/js/materialize.js', revision: '1' },
   { url: '/js/nav.js', revision: '2' },
-  { url: '/js/api.js', revision: '1' },
+  { url: '/js/api.js', revision: '2' },
   { url: '/js/idb.js', revision: '1' },
   { url: '/js/startup.js', revision: '2' },
   { url: '/img/icon-72x72.png', revision: '1' },

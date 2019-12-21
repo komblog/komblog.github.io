@@ -223,7 +223,7 @@ function callTeam(idTeam, clubName){
         }
       }
     };
-    xhttp.open("GET", "pages/team" + ".html", true);
+    xhttp.open("GET", "Pages/team" + ".html", true);
     xhttp.send();
 }
 
