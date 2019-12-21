@@ -10,7 +10,7 @@ workbox.precaching.precacheAndRoute([
   { url: '/js/nav.js', revision: '1' },
   { url: '/js/api.js', revision: '1' },
   { url: '/js/idb.js', revision: '1' },
-  { url: '/js/startup.js', revision: '1' },
+  { url: '/js/startup.js', revision: '2' },
   { url: '/img/icon-72x72.png', revision: '1' },
   { url: '/img/icon-96x96.png', revision: '1' },
   { url: '/img/icon-128x128.png', revision: '1' },

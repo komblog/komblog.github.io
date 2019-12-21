@@ -16,19 +16,6 @@
         });
       }
   
-      //Register service worker
-      function registerServiceWorker() {
-        return navigator.serviceWorker
-        .register('service-worker.js')
-        .then(function(register) {
-          console.log("Registrasi serive worker berhasil.");
-          return register;
-        })
-        .catch(function(err) {
-            console.error("Registrasi service worker gagal.");
-        })
-      }
-  
       function requestPushPermition() {
         if('Notification' in window) {
           Notification.requestPermission()
