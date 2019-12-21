@@ -35,7 +35,6 @@
     if(!('serviceWorker' in navigator)) {
         console.log("Browser tidak mendukung worker.");
     } else {
-      registerServiceWorker();
       requestPushPermition();
       registerIDB();
     }
