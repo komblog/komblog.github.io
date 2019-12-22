@@ -16,7 +16,8 @@ workbox.precaching.precacheAndRoute([
   { url: '/img/icon-128x128.png', revision: '1' },
   { url: '/img/icon-192x192.png', revision: '1' },
   { url: '/img/icon-384x384.png', revision: '1' },
-  { url: '/img/icon-512x512.png', revision: '1' }
+  { url: '/img/icon-512x512.png', revision: '1' },
+  { url: '/Pages/favorite.html', revision: '1' }
 ]);
 
 workbox.routing.registerRoute(
