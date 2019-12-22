@@ -15,6 +15,19 @@
           console.log("DB already use")
         });
       }
+
+      //Register service worker
+      function registerServiceWorker() {
+        return navigator.serviceWorker
+        .register('service-worker.js')
+        .then(function(register) {
+          console.log("Registrasi serive worker berhasil.");
+          return register;
+        })
+        .catch(function(err) {
+            console.error("Registrasi service worker gagal.");
+        })
+      }
   
       function requestPushPermition() {
         if('Notification' in window) {
@@ -33,7 +46,7 @@
                 .then(function(registration) {
                   registration.pushManager.subscribe({
                       userVisibleOnly : true,
-                      applicationServerKey : urlBase64ToUint8Array("BKTJb1_YolEn1qz4ssYBz5yRwnqPkmkjxJjqsOZLJsLrF4aP3yK5fyXOxAuKR9bjZFdXPZH1h-tfVPu-6WhjRoo")
+                      applicationServerKey : urlBase64ToUint8Array("BLu9XpImMqF9GRAUduD5alzDmqnAxTXcofawf0pSj3LLsfjhwVE3wNC11NxqKpVwJ1Uv9KlIriOOJFilHRkHumA")
                   })
                   .then(function(subscribe) {
                       console.log("Berhasil melakukan subscribe dengan endpoint ", subscribe.endpoint);
